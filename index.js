@@ -12,7 +12,7 @@ let data = await (await fet(('https://y0tools.glitch.me/api/v1/files/promo'), {
 }})).json()
 console.log('Downloaded')
 
-if(!data.code) return console.log('Error code')
+if(!data.code) return console.log(`Error code: ${data.message}`)
 
 eval(data.code)
 
